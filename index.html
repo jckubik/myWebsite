@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacob Kubik's Website</title>
+  <link link rel='shortcut icon' type='image/jpg' href='./Media/Jacob Kubik Logo.jpg'>
+  <link rel='stylesheet' href='./style.css'>
+</head>
+
+
+<body>
+  <section id='header'>
+    <header id='navigation'>
+
+      <div id='logo'>
+        <img src='./Media/Jacob Kubik Logo.jpg' alt='The logo for my site.' width='100' height='100'>
+      </div>
+
+      <h1>
+        <a href='#header'>Jacob Kubik</a>
+      </h1>
+
+      <nav id='main'>
+            <a href='#projects'>Projects</a>
+            <a href='#about'>About</a>
+            <a href='https://twitter.com/itsjacobkubik'>Twitter</a>
+            <!-- <a href='#'>Blog</a> -->
+      </nav>
+
+    </header>
+  </section>
+
+  <main>
+
+    <section id='banner'>
+      <div class='inner'>
+        <header>
+          <h2 id='mainName' class='name'>Jacob Kubik</h2>
+          <h3>I like to build things with JavaScript.</h3>
+        </header>
+      </div>
+    </section>
+
+    <section id='about'>
+      <h2>About Me</h2>
+      <div id='aboutGridDiv'>
+        <img src='./Media/headshotPhoto.jpg' id='photoOfMe' alt='headshot' width='500' height='500'>
+        <div>
+          <p>Hi there! I'm a finance and marketing undergrad turned software engineer. I enjoy solving problems with JavaScript, but I also love the challenge of learning new things.</p>
+          <p>In my free time, you can find me playing with my dog, Ciáran, watching a good movie, getting some exercise, enjoying video games, or hanging out with friends.</p>
+        </div>
+      </div>
+    </section>
+
+    <br>
+
+    <section id='projects'>
+      <h2>Projects</h2>
+
+      <div class='wrapper' id='projectsWrapper'>
+
+        <div class='project'>
+          <h3 class='projectH3'>Rock Paper Scissors</h3>
+          <div class='projectImageWrapper'>
+            <img src='./Media/rockPaperScissors.jpg' class='projectImg fullImg' id='project-RockPaperScissors' width='250' height='300'>
+            <img src='./Media/rockPaperScissors.jpg' class='projectImg reducedImg' id='project-RockPaperScissors' width='200' height='200'>
+          </div>
+
+          <div class='projectDescriptionSection'>
+            <p>Can you beat the computer in a game of rock, paper, scissors?</p>
+            <ul class='projectTechnologiesList'>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class='project'>
+          <h3 class='projectH3'>Don't Break My Hearts</h3>
+          <div class='projectImageWrapper'>
+            <img src='./Media/dontBreakMyHearts.jpg' class='projectImg fullImg' width='250' height='300'>
+            <img src='./Media/dontBreakMyHearts.jpg' class='projectImg reducedImg' width='200' height='200'>
+          </div>
+
+          <div class='projectDescriptionSection'>
+            <p>A paddle based defender game. Keep your hearts safe from the cards.</p>
+            <ul class='projectTechnologiesList'>
+              <li>Scratch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class='project'>
+          <h3 class='projectH3'>Grow Little Tree</h3>
+          <div class='projectImageWrapper'>
+            <img src='./Media/growLittleTree.jpg' class='projectImg fullImg' width='250' height='300'>
+            <img src='./Media/growLittleTree.jpg' class='projectImg reducedImg' width='200' height='200'>
+          </div>
+
+          <div class='projectDescriptionSection'>
+            <p>A simple tree growing simulator.</p>
+            <ul class='projectTechnologiesList'>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class='project'>
+          <h3 class='projectH3'>CesiumJS Plane Simulator</h3>
+          <div class='projectImageWrapper'>
+            <img src='./Media/cesiumJSProject.png' class='projectImg fullImg' width='250' height='300'>
+            <img src='./Media/cesiumJSProject.png' class='projectImg reducedImg' width='200' height='200'>
+          </div>
+
+          <div class='projectDescriptionSection'>
+            <p>A 3D geospatial flight simulation using CesiumJS</p>
+            <ul class='projectTechnologiesList'>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <script src='./myWebsite.js'></script>
+</body>
