@@ -6,6 +6,15 @@ body {
   font-family: var(--baseFontFamily);
 }
 
+[data-theme="dark"] {
+  background-color: var(--mainDarkModeColor);
+  color: var(--mainLightModeColor);
+}
+
+[data-theme="dark"] a {
+  color: var(--mainLightModeColor);
+}
+
 h1,
 h2,
 h3,
@@ -70,10 +79,11 @@ header h1 {
 
 nav#main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr;
   grid-template-rows: none;
   grid-column-gap: 0;
   text-align: center;
+  align-items: center;
 }
 
 #navigation a {
@@ -86,16 +96,20 @@ nav a {
   font-weight: 700;
 }
 
+.hide-button {
+  display: none;
+}
+
 /* ------------ Banner Section ------------ */
 
 #banner {
-  background-color: hsla(322, 25%, 38%, 0.6);
+  background-color: var(--mainPurpleLighter);
   padding: 17vh 4vw 17vh 4vw;
   margin: 0;
 }
 
 #banner .inner {
-  background-color: hsla(323, 14%, 40%, 0.6);
+  background-color: var(--mainPurpleDarker);
   color: white;
   padding: 2em 2em 2em 2em;
   margin: 0;
@@ -133,6 +147,11 @@ nav a {
   justify-items: center;
 }
 
+#projects a {
+  text-decoration: none;
+  color: white;
+}
+
 #projectsWrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -144,9 +163,13 @@ nav a {
   margin: 5vh 3vw 5vh 3vw;
 }
 
+.wrapper a {
+  display: flex;
+}
+
 .project {
   height: fit-content;
-  background-color: hsla(322, 25%, 38%, 0.6);
+  background-color: var(--mainPurpleLighter);
   text-align: center;
   height: auto;
   padding: 1em;
@@ -166,7 +189,7 @@ nav a {
 }
 
 .projectDescriptionSection {
-  background-color: hsla(323, 14%, 40%, 0.6);
+  background-color: var(--mainPurpleDarker);
   color: white;
   padding: 0.5rem;
   flex: 1;
@@ -197,6 +220,12 @@ nav a {
   --heading-5: var(--smallFontSize);
   --heading-6: 0.64rem;
   --heading-7: var(--smallestFontSize);
+
+  /* Colors */
+  --mainPurpleLighter: hsl(322deg 24% 60% / 99%);
+  --mainPurpleDarker: hsl(323deg 14% 47% / 99%);
+  --mainLightModeColor: white;
+  --mainDarkModeColor: rgb(40, 40, 40);
 }
 
 /*********
@@ -223,7 +252,7 @@ nav a {
 @media (min-width: 400px) {
   /* ----------- Navigation -----------*/
 
-  nav ul {
+  /* nav ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -231,7 +260,7 @@ nav a {
   nav li {
     display: grid;
     justify-content: center;
-  }
+  } */
 
   /* ------------ Project Section ------------ */
 
@@ -269,7 +298,7 @@ nav a {
 
   header#navigation {
     display: grid;
-    grid-template-columns: 1fr 8fr 5fr;
+    grid-template-columns: 1fr 7fr 6fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0;
     grid-row-gap: 0;
@@ -283,10 +312,6 @@ nav a {
   }
 
   /* ------------ Banner Section ------------ */
-
-  #banner {
-    margin: 2vh 0 2vh 0;
-  }
 
   #banner .inner {
     margin: 2em 4em 2em 4em;

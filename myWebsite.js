@@ -1,16 +1,6 @@
-const mainNav = document.querySelector(`#main`);
-const topOfNav = mainNav.offsetTop;
 const projectDiv = document.querySelectorAll(`div.project`);
+const darkLightButtons = document.querySelectorAll(`.darkLightButton`);
 
-function fixMainNav() {
-  if (window.scrollY >= topOfNav) {
-    document.body.style.paddingTop = mainNav.offsetHeight + `px`;
-    document.body.classList.add(`fixed-nav`);
-  } else {
-    document.body.style.paddingTop = 0;
-    document.body.classList.remove(`fixed-nav`);
-  }
-}
 
 function projectImgScale(event) {
   event.target.children.item(1).classList.add(`projectImgHover`);
@@ -25,13 +15,29 @@ function projectImgDescale(event) {
   event.target.children.item(0).style.textDecoration = `none`;
 }
 
+function handleDarkLightMode(event) {
+  const body = document.querySelector(`body`);
+  const header = document.querySelector(`#header`);
+  const lightButton = document.querySelector(`#lightButton`);
+  const darkButton = document.querySelector(`#darkButton`);
+
+  if (!body.getAttribute(`data-theme`)) {
+    body.setAttribute(`data-theme`, `dark`);
+    darkButton.classList.add(`hide-button`);
+    lightButton.classList.remove(`hide-button`);
+  } else {
+    body.removeAttribute(`data-theme`);
+    lightButton.classList.add(`hide-button`);
+    darkButton.classList.remove(`hide-button`);
+  }
+}
+
 
 // Event Listners ------------------------------------
 
-// -- For sticky nav bar
-window.addEventListener(`scroll`, fixMainNav);
-
 // Project picture scales on hover
 projectDiv.forEach(div => div.addEventListener(`mouseenter`, projectImgScale));
-
 projectDiv.forEach(div => div.addEventListener(`mouseleave`, projectImgDescale));
+
+// Dark/Light Mode
+darkLightButtons.forEach(button => button.addEventListener(`click`, handleDarkLightMode));
